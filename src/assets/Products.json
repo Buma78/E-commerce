@@ -1,0 +1,10 @@
+[
+    {"id":"11","newPrice":"47999","oldPrice":"65999","productImage":"https://m.media-amazon.com/images/I/417PwBC+iEL._SX342_SY445_.jpg","productName":"Apple iPhone 12 (64GB) - (Product) RED"},
+    {"id":"22","newPrice":"109900","oldPrice":"129900","productImage":"https://m.media-amazon.com/images/I/617FFRO3vcL._SX679_.jpg","productName":"Apple iPhone 13 Pro (256GB) - Silver"},
+    {"id":"33","newPrice":"2990","oldPrice":"3190","productImage":"https://m.media-amazon.com/images/I/71L5lSfJIPS._SX679_.jpg","productName":"New Apple AirTag"},
+    {"id":"44","newPrice":"10900","oldPrice":"10900","productImage":"https://m.media-amazon.com/images/I/41tbRWAJfES._SX679_.jpg","productName":"Apple MagSafe Battery Pack (for iPhone 14, iPhone 14 Pro)"},
+    {"id":"55","newPrice":"16900","oldPrice":"26900","productImage":"https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg","productName":"Apple AirPods Pro (2nd Generation)​​​​​​​"},
+    {"id":"66","newPrice":"1649","oldPrice":"1900","productImage":"https://m.media-amazon.com/images/I/41YDDVjblsL._SX679_.jpg","productName":"Apple EarPods with 3.5mm Headphone Plug​​​​​​​​​​​​​​"},
+    {"id":"77","newPrice":"8990","oldPrice":"10900","productImage":"https://m.media-amazon.com/images/I/21bn7AjfSnS._SX679_.jpg","productName":"Apple Pencil (2nd Generation)​​​​​​​​​​​​​​"},
+    {"id":"88","newPrice":"749","oldPrice":"900","productImage":"https://m.media-amazon.com/images/I/413zwUVL+1L._SX679_.jpg","productName":"Apple Lightning to 3.5 mm Headphone Jack Adapter​​​​​​​​​​​​​​"}
+]
