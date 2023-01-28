@@ -24,7 +24,7 @@
              <span>wallet Amount: {{ Amount }}</span>
              
            </div>
-           <button @click="()=>Buy" style="background-color:red; cursor:pointer">Buy</button>
+           <button @click="Buy" style="background-color:red; cursor:pointer">Buy</button>
         </div>
     <div class="card">
       <div class="card-body">

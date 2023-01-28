@@ -4,9 +4,9 @@
    import { ref } from 'vue';
 
    const router = useRouter();
-    const email = ref<any>("");
-    const password = ref<any>("");
-    const SignintoAcc =()=> {
+    const email = ref<string>("");
+    const password = ref<string>("");
+    const SignintoAcc =():void=> {
        signInWithEmailAndPassword(getAuth(),email.value, password.value)
        .then((data)=>{
           alert("Signed In sucessfully");
@@ -16,7 +16,7 @@
        })
     }
     const googleProvider = new GoogleAuthProvider();
-    const Signinwithgoogle=()=> {
+    const Signinwithgoogle=():void=> {
         signInWithPopup(getAuth(),googleProvider).
         then((res)=>{
             alert("Signed In sucessfully");
