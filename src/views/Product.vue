@@ -22,7 +22,7 @@
                <div class="card-body">
                 <p class="card-title">{{ product.productName }}</p>
                 <div class='rating'>
-                     <img src="../assets/Group 1.png" class='star' alt='rating' />
+                     <img src="../assets/Group1.png" class='star' alt='rating' />
                          <div class='price'>
                              <span class='old-price'>
                                  {{product.oldPrice}}/-
