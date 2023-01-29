@@ -7,9 +7,12 @@
        let amounttobe = ref<number>(0);
        const totalAmount =():number =>  store.cart.reduce((acc,item) => acc += Number(item.newPrice),0) ;
        amounttobe.value = totalAmount();
-       const Buy = (): void =>{
+       const Buy = () =>{
              if(Amount.value >= amounttobe.value){
                   Amount.value = Amount.value - amounttobe.value;
+                  alert("Your order is Placed successfully");
+                  store.makeCartempty();
+                  amounttobe.value = 0;
              }
              else {
                 alert("You have unsufficient amount");

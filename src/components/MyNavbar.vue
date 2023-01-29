@@ -12,6 +12,7 @@
    const isLoggedIn = ref<boolean>(false);
 
    let auth : any;
+   
    onMounted(() => {
     auth = getAuth();
     onAuthStateChanged(auth,(user)=>{
@@ -45,9 +46,9 @@
                 </div>
             </div>            
             <div class="right-nav">
-                <span v-if="isLoggedIn"><RouterLink to="/cart">{{store.cartlen}}Cart</RouterLink></span>
+                <span v-if="isLoggedIn"><RouterLink to="/cart">Cart ({{store.cartlen}})</RouterLink></span>
                 <span v-if="!isLoggedIn"><RouterLink to="/Login">LogIn</RouterLink></span>
-                <span @click="handleSignOut" v-if="isLoggedIn">LogOut</span>
+                <span @click="handleSignOut" v-if="isLoggedIn">Logout</span>
             </div>
         </div>
     </main>
