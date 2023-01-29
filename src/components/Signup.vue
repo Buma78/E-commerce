@@ -4,9 +4,9 @@ import { useRouter } from 'vue-router';
    import { ref } from 'vue';
 
    const router = useRouter();
-    const email = ref("");
-    const password = ref("");
-    const register =()=> {
+    const email = ref<string>("");
+    const password = ref<string>("");
+    const register =():void=> {
        createUserWithEmailAndPassword(getAuth(),email.value, password.value)
        .then((data)=>{
           alert("Registration sucessfully");
@@ -17,7 +17,7 @@ import { useRouter } from 'vue-router';
     }
 
     const googleProvider = new GoogleAuthProvider();
-    const registerwithGoogle=()=> {
+    const registerwithGoogle=():void=> {
         signInWithPopup(getAuth(), googleProvider).then((res)=>{
             alert("Registration sucessfully");
             router.push("/Product");

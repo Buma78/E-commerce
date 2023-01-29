@@ -26,6 +26,7 @@
 
    const handleSignOut= ()=>{
        signOut(auth).then(()=>{
+        localStorage.removeItem('money');
           router.push("/");
        }).catch((error)=>{
           alert(error.message);
@@ -57,7 +58,7 @@
 <style scoped>
   .container{
     width: 100%;
-    height: 12vh;
+    min-height: 12vh;
     padding: 10px 30px;
     background-color: rgb(221, 228, 247);
     display: flex;

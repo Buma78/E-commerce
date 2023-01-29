@@ -1,8 +1,10 @@
 <script setup lang="ts"> 
        import { useCartStore } from '@/stores/Cart';
        import { ref } from 'vue';
-
-       const Amount = ref<number>(1000000);
+       
+       let storedAmount:number = Number(localStorage.getItem("money"));
+       let realAmount:number = storedAmount? storedAmount : 1000000;
+       const Amount = ref<number>(realAmount);
        const store = useCartStore();
        let amounttobe = ref<number>(0);
        const totalAmount =():number =>  store.cart.reduce((acc,item) => acc += Number(item.newPrice),0) ;
@@ -12,6 +14,7 @@
                   Amount.value = Amount.value - amounttobe.value;
                   alert("Your order is Placed successfully");
                   store.makeCartempty();
+                  localStorage.setItem("money",String(Amount.value));
                   amounttobe.value = 0;
              }
              else {

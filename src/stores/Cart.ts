@@ -10,7 +10,11 @@ import { defineStore } from 'pinia'
 }
 
 export const useCartStore = defineStore('cart', () => {
-  const cart = ref<Cartitem[]>([]);
+  let getcart= localStorage.getItem('cart');
+  let cardArray:Cartitem[]=[];
+  if(typeof getcart ==='string'){ cardArray=JSON.parse(getcart);}
+
+  const cart = ref<Cartitem[]>(cardArray);
   const cartlen = computed(() => {
     return cart.value.length;
   });
@@ -19,15 +23,18 @@ export const useCartStore = defineStore('cart', () => {
     let index = cart.value.findIndex(pre => pre.id === item.id);
      if(index === -1) {
         cart.value.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart.value));
       }
     }
    
   function removeItemFromCart(item:Cartitem) {
       cart.value = cart.value.filter(pre => pre.id !== item.id);
+      localStorage.setItem('cart', JSON.stringify(cart.value));
     }
 
   function makeCartempty(){
       cart.value = [];
+      localStorage.setItem('cart', JSON.stringify(cart.value));
       console.log("hii");
     }
   return {cart, cartlen,Addtocart,removeItemFromCart,makeCartempty};
