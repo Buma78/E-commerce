@@ -109,5 +109,6 @@ import { useRouter } from 'vue-router';
     background-size: contain;
     border: 1px solid black;
     border-radius: 5px;
+    cursor: pointer;
    }
 </style>

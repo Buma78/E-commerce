@@ -3,7 +3,6 @@
    import { ref, onMounted } from 'vue';
    import { getAuth, onAuthStateChanged,signOut } from '@firebase/auth';
    import { useCartStore } from '@/stores/Cart';
-   
 
    const store = useCartStore();
    
