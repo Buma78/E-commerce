@@ -40,10 +40,7 @@
                     <th>#</th>
                     <th>Image</th>
                    <th>Name</th>
-             <!-- <th>Quantity</th> -->
                  <th>Price</th>
-                <!-- <th>Subtotal</th> -->
-                <!-- <th></th> -->
                  </tr>
             </thead>
             <tbody>
@@ -55,23 +52,10 @@
                         <td>
                            {{item.productName}}
                          </td>
-                             <!-- <td>
-                                    <i 
-                                        @click="data.incrementQ(item)"
-                                        class="bi bi-caret-up"></i>
-                                    <span class="mx-2">
-                                        {{item.quantity}}
-                                    </span>
-                                    <i 
-                                        @click="data.decrementQ(item)"
-                                        class="bi bi-caret-down"></i>
-                                </td> -->
+                            
                           <td>
                              ${{item.newPrice}}
                           </td>
-                                <!-- <td>
-                                    ${{item.price * item.quantity}} 
-                                </td> -->
                          <td>
                             <button @click="()=>store.removeItemFromCart(item)">Remove</button>
                         </td>
